@@ -82,8 +82,8 @@ RunService:BindToRenderStep("AimLock", 0, function()
             end
         end
     end)
-    
-    local game = game
+ wait(10)
+ local game = game
 local RunService
 local hrp
 RunService = game:GetService("RunService")
@@ -98,7 +98,7 @@ RunService.Heartbeat:Connect(function()
         end
     end)
 end)
-
+wait(10)
 local oldIndex = nil 
 oldIndex = hookmetamethod(game, "__index", newcclosure(function(self, Index)
     if self == Mouse and not checkcaller() and Toggles.aim_Enabled.Value and Options.Method.Value == "Mouse.Hit/Target" and getClosestPlayer() then
